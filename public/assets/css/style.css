@@ -1,7 +1,47 @@
-li {
-  padding: 5px;
-  margin: 5px;
-  background: #faebd7;
+body{
+  text-align: center;
+ background-image: url("paper.gif");
+   background-color: #cccccc;
+}
+
+
+/* .mainContainer{
+  width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.leftContainer{
+  text-align: left;
+  float: left;
+  width: 50%;
+  height: auto;
+}
+
+.rightContainer{
+  text-align: left;
+  float: left;
+  width: 50%;
+  height: auto;
+}
+
+.bottomContainer{
+  float: right;
+  width: 100%;
+}
+
+.change-devoured {
+  float: right;
+}
+
+.delete-burger{
+  float: right;
+} */
+
+ol> li {
+  padding: 10px;
+  margin: 10px;
+  background: white;
 }
 
 .label {

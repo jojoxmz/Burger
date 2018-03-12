@@ -3,13 +3,13 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (cat.js) to use its database functions.
-var burger = require("../models/burger.js");
+var burgerss = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
-  burger.selectAll(function(data) {
+  burgerss.selectAll(function(data) {
     var allTableData = {
-      burger: data
+      burgerss: data
     };
     console.log(allTableData);
     res.render("index", allTableData);
@@ -18,10 +18,18 @@ router.get("/", function(req, res) {
 
 router.post("/api/burger", function(req, res) {
 
-  burger.insertOne("burger_name", [req.body.burger_name], function(result) {
-    console.log({ id: result.insertId });
-    res.json({ id: result.insertId });
+  // burger.insertOne("burger_name", [req.body.burger_name], function(result) {
+  //   console.log({ id: result.insertId });
+  //   res.json({ id: result.insertId });
     // res.redirect("/"); Do this on the front end
+    burgerss.insertOne([
+        "burger_name", "devoured"
+      ], [
+        req.body.burger_name, req.body.devoured
+      ], function(result) {
+        // Send back the ID of the new quote
+        res.json({ id: result.insertId });
+
 	});
 });
 
@@ -30,7 +38,7 @@ router.put("/api/burger/:id", function(req, res) {
 
   console.log("condition", condition);
 
-  burger.updateOne({
+  burgerss.updateOne({
     devoured: req.body.devoured
   }, condition, function(result) {
     if (result.changedRows == 0) {
@@ -42,18 +50,18 @@ router.put("/api/burger/:id", function(req, res) {
   });
 });
 
-// router.delete("/api/burger/:id", function(req, res) {
-//   var condition = "id = " + req.params.id;
-//
-//   cat.delete(condition, function(result) {
-//     if (result.affectedRows == 0) {
-//       // If no rows were changed, then the ID must not exist, so 404
-//       return res.status(404).end();
-//     } else {
-//       res.status(200).end();
-//     }
-//   });
-// });
+router.delete("/api/burger/:id", function(req, res) {
+  var condition = "id = " + req.params.id;
+
+  burgerss.delete(condition, function(result) {
+    if (result.affectedRows == 0) {
+      // If no rows were changed, then the ID must not exist, so 404
+      return res.status(404).end();
+    } else {
+      res.status(200).end();
+    }
+  });
+});
 
 // Export routes for server.js to use.
 
