@@ -7,12 +7,8 @@ const dbLink = "mysql://gjl87cosm5os4ulk:zihw14j9bv346iyh@e764qqay0xlsc4cz.cbetx
 if (process.env.JAWSDB_URL){
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 }else{
-  connection = mysql.createConnection(port: 3306,
-    host: "e764qqay0xlsc4cz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    user: "gjl87cosm5os4ulk",
-    password: "zihw14j9bv346iyh",
-    database: "mjmf24nj9y1vga7s");
-}
+  connection = mysql.createConnection(dbLink)
+};
 
 // var connection = mysql.createConnection({
 //   port: 3306,
