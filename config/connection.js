@@ -11,7 +11,7 @@ if (process.env.JAWSDB_URL){
     host: "e764qqay0xlsc4cz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     user: "gjl87cosm5os4ulk",
     password: "zihw14j9bv346iyh",
-    database: "burger_db");
+    database: "mjmf24nj9y1vga7s");
 }
 
 // var connection = mysql.createConnection({

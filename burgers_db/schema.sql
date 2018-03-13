@@ -1,5 +1,5 @@
 DROP DATABASE IF EXISTS mjmf24nj9y1vga7s;
-CREATE DATABASE burger_db;
+CREATE DATABASE mjmf24nj9y1vga7s;
 USE mjmf24nj9y1vga7s;
 
 CREATE TABLE burger
