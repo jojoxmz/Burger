@@ -5,28 +5,24 @@ body{
  	background-size:cover repeat;
 }
 
-
-/* .mainContainer{
+/*
+.mainContainer{
   width: 900px;
   margin: 0 auto;
   text-align: center;
-}
+} */
 
 .leftContainer{
   text-align: left;
-  float: left;
-  width: 50%;
-  height: auto;
+  color: grey;
 }
 
 .rightContainer{
   text-align: left;
-  float: left;
-  width: 50%;
-  height: auto;
+  color: grey;
 }
 
-.bottomContainer{
+/* .bottomContainer{
   float: right;
   width: 100%;
 }
